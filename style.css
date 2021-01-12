@@ -1,0 +1,10 @@
+body{
+    background-color: darkslategrey;
+    color: whitesmoke;
+    font-family:Gabriola;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-size: 80px;
+}

@@ -1,0 +1,4 @@
+ls - list of files in current directory
+cd - go to home directory
+cd E: - go to disk E
+cd web/Project/Duhoot - go to Duhoot directory from E

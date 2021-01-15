@@ -1,3 +1,4 @@
+@import "http://fonts.fontstorage.com/import/acme.css";
 body{
     background-color: darkslategrey;
     color: whitesmoke;
@@ -7,4 +8,5 @@ body{
 }
 h1{
     font-size: 80px;
+    font-family: Acme;
 }

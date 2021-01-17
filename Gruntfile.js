@@ -1,23 +1,29 @@
-//Стандартный экспорт модуля в nodejs
 module.exports = function(grunt) {
-    // Инициализация конфига GruntJS
+    require('jit-grunt')(grunt);
+
     grunt.initConfig({
-
-        //Настройки различных модулей GruntJS, их нужно предварительно установить через менеджер пакетов npm, или добавить в файл package.json перед запуском npm install
-
-        //Например проверка кода javascript с помощью утилиты jshint
-        jshint: {},
-
-        //Склеивание файлов
-        concat: {}
-
-        //И так далее
+        less: {
+            development: {
+                options: {
+                    compress: false,
+                    yuicompress: false,
+                    optimization: 0
+                },
+                files: {
+                    "css/style.css": "less/main/style.less" // destination file and source file
+                }
+            }
+        },
+        watch: {
+            styles: {
+                files: ['less/**/*.less'], // which files to watch
+                tasks: ['less'],
+                options: {
+                    nospawn: false
+                }
+            }
+        }
     });
 
-    //Загрузка модулей, которые предварительно установлены
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-
-    //Эти задания будут выполнятся сразу же когда вы в консоли напечатание grunt, и нажмете Enter
-    grunt.registerTask('default', ['jshint', 'concat']);
+    grunt.registerTask('default', ['less', 'watch']);
 };

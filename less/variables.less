@@ -1,2 +1,20 @@
+/*variables*/
+
 @default-font-size: 14px;
 
+@red: #e94e38;
+@green: #1baf5d;
+@yellow: #f19e1f;
+@purple: #88499c;
+@lightgrey:#e2dee0;
+@grey:#9ca9aa;
+
+/*mixins*/
+
+.border(@radius:5px){
+    border-top:2px solid grey;
+    border-right: 3px solid darkgrey;
+    border-bottom:3px solid darkgrey;
+    border-left:2px solid grey;
+    border-radius: @radius;
+}

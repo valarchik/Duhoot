@@ -1,0 +1,118 @@
+/*variables*/
+/*mixins*/
+header {
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+header .container-head {
+  background: linear-gradient(to right, #ffffff00 50%, #e94e38 50%);
+  display: flex;
+  justify-content: center;
+}
+header .container-head .head-block {
+  background-color: white;
+  margin-left: auto;
+}
+header .container-head .head-block .global-navigation {
+  display: flex;
+  position: relative;
+}
+header .container-head .head-block .global-navigation .logo {
+  padding: 15px 0;
+}
+header .container-head .head-block .global-navigation .navigation {
+  margin: 0;
+  padding: 30px 0;
+  padding-left: 70px;
+}
+header .container-head .head-block .global-navigation .navigation li {
+  display: inline-block;
+  margin-right: 15px;
+}
+header .container-head .head-block .global-navigation .navigation li a {
+  display: block;
+  text-decoration: none;
+  color: #9ca9aa;
+  position: relative;
+}
+header .container-head .head-block .global-navigation .navigation li a:hover:after {
+  content: '';
+  width: 100%;
+  border-bottom: 2px solid #9ca9aa;
+  display: block;
+  position: absolute;
+}
+header .container-head .head-block .global-navigation .navigation li a:active {
+  border-bottom: 2px solid grey;
+  color: grey;
+}
+header .container-head .head-block .global-navigation .global-search {
+  background: #e2dee0;
+  padding: 25px;
+  position: relative;
+}
+header .container-head .head-block .global-navigation .global-search .search-show {
+  display: none;
+  position: absolute;
+  right: 73px;
+  padding: 24px;
+  background-color: #e2dee0;
+  top: 0;
+  width: 0;
+}
+header .container-head .head-block .global-navigation .global-search .search-show input {
+  display: none;
+  width: 350px;
+  border-radius: 15px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+}
+header .container-head .head-block .global-navigation .global-search .search-show input:focus {
+  outline: none;
+}
+header .container-head .head-block .global-navigation .global-search .search-icon {
+  background: url("../images/icon-sprite.png") left top no-repeat;
+  width: 23px;
+  height: 23px;
+}
+header .container-head .head-block .global-navigation .global-search .search-icon:hover {
+  filter: contrast(0.6);
+}
+header .container-head .login {
+  background-color: #e94e38;
+  padding: 30px;
+  padding-left: 70px;
+  margin-right: auto;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+header .container-head .login:hover {
+  box-shadow: inset 20px 2px 20px -5px #83281d63;
+}
+header .container-head .login:active {
+  box-shadow: inset 20px 2px 20px -5px rgba(97, 27, 22, 0.66);
+}
+header .container-head .login:before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  background: url(../images/icon-sprite.png) -22px 0 no-repeat;
+  width: 15px;
+  height: 15px;
+}
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('https://nomail.com.ua/files/eot/77171d8f5b5283f9d47a3434704bf944.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/77171d8f5b5283f9d47a3434704bf944.woff') format('woff'), url('https://nomail.com.ua/files/woff2/77171d8f5b5283f9d47a3434704bf944.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: local('Gotham-Medium'), url('https://nomail.com.ua/files/woff/77171d8f5b5283f9d47a3434704bf944.woff') format('woff');
+}
+body {
+  margin: 0;
+  font-family: 'Gotham Medium';
+}

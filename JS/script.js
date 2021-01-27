@@ -15,9 +15,10 @@ searchIcon.addEventListener('click', function () {
 $(document).mouseup(function (e) { // событие клика по веб-документу
 
     if (!searchIconQuery.is(e.target) // если клик был не по нашему блоку
-        && searchIconQuery.has(e.target).length === 0 && search.is(":visible") && searchInput.is(":visible")) { // и не по его дочерним элементам
-        search.animate({width: "0px"}, 500);// скрываем его
+        && searchIconQuery.has(e.target).length === 0 && search.is(":visible")
+        && searchInput.is(":visible") && !searchInput.is(e.target)) { // и не по его дочерним элементам и инпуту
 
+        search.animate({width: "0px"}, 500);// скрываем его
         setTimeout(function () {
             search.css('display', 'none');
             searchInput.css('display', 'none');

@@ -4,6 +4,7 @@ header {
   border: 1px solid black;
   text-transform: uppercase;
   font-size: 14px;
+  position: relative;
 }
 header .container-head {
   background: linear-gradient(to right, #ffffff00 50%, #e94e38 50%);
@@ -100,9 +101,151 @@ header .container-head .login:before {
   position: absolute;
   top: 26px;
   left: 40px;
-  background: url(../images/icon-sprite.png) -22px 0 no-repeat;
+  background: url(../images/icon-sprite.png) -28px 0 no-repeat;
   width: 15px;
   height: 15px;
+}
+header form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.53);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+header form .close {
+  background: #afafaf;
+  height: 20px;
+  width: 3px;
+  position: relative;
+  left: 98%;
+  transform: rotate(45deg);
+}
+header form .close:after {
+  content: "";
+  height: 3px;
+  width: 20px;
+  background: #afafaf;
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  transform: rotate(0deg);
+}
+header form .close:hover {
+  background: white;
+}
+header form .close:hover:after {
+  background: white;
+}
+header form h2 {
+  color: white;
+  text-align: center;
+  text-transform: none;
+  font-size: 25px;
+  margin-top: 0;
+}
+header form .social-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+header form .social-buttons button {
+  height: 35px;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: none;
+  background-image: linear-gradient(to right, #e94e38 0%, #e96e58 51%, #e92727 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  display: block;
+}
+header form .social-buttons button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+header form .social-buttons button:hover a:before {
+  filter: drop-shadow(#fffaf3);
+}
+header form .social-buttons button:active {
+  background-image: linear-gradient(to right, #cb4331 0%, #c15b49 51%, #b51e1e 100%);
+}
+header form .social-buttons button:active a {
+  filter: opacity(0.5);
+}
+header form .social-buttons button a {
+  display: block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+header form .social-buttons .facebook-button {
+  margin-right: 5px;
+}
+header form .social-buttons .facebook-button a:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 20%;
+  background: url(../images/icon-sprite.png) -439px 0 no-repeat;
+  width: 14px;
+  height: 20px;
+}
+header form .social-buttons .google-button a:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 18%;
+  background: url(../images/icon-sprite.png) -454px 0 no-repeat;
+  width: 20px;
+  height: 20px;
+}
+header form input {
+  width: 100%;
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  padding: 5px;
+}
+header form input:focus {
+  outline: none;
+}
+header form label {
+  color: white;
+}
+header form .login-button {
+  margin-top: 15px;
+  height: 35px;
+  flex-grow: 1;
+  border: none;
+  color: white;
+  font-family: Gotham-Medium;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #e94e38 0%, #e96e58 51%, #e92727 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  display: block;
+}
+header form .login-button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  text-decoration: none;
+}
+header form .login-button:active {
+  background-image: linear-gradient(to right, #cb4331 0%, #c15b49 51%, #b51e1e 100%);
+  color: rgba(255, 255, 255, 0.55);
+  outline: none;
 }
 @font-face {
   font-family: 'Gotham Medium';
@@ -115,4 +258,5 @@ header .container-head .login:before {
 body {
   margin: 0;
   font-family: 'Gotham Medium';
+  box-sizing: border-box;
 }

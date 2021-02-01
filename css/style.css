@@ -1,7 +1,6 @@
 /*variables*/
 /*mixins*/
 header {
-  border: 1px solid black;
   text-transform: uppercase;
   font-size: 14px;
   position: relative;
@@ -92,9 +91,12 @@ header .container-head .login {
 }
 header .container-head .login:hover {
   box-shadow: inset 20px 2px 20px -5px #83281d63;
+  border-right: 3px solid rgba(255, 235, 228, 0.03);
 }
 header .container-head .login:active {
-  box-shadow: inset 20px 2px 20px -5px rgba(97, 27, 22, 0.66);
+  box-shadow: inset 17px 5px 20px 15px rgba(186, 65, 44, 0.79);
+  filter: opacity(0.8);
+  border-right: 3px solid rgba(255, 235, 228, 0.06);
 }
 header .container-head .login:before {
   content: '';
@@ -105,22 +107,35 @@ header .container-head .login:before {
   width: 15px;
   height: 15px;
 }
-header form {
+header .overlay {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10% 0;
+  z-index: 2;
+}
+header .overlay .form-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.53);
+  width: 475px;
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 100px;
+  top: 82px;
   left: 50%;
   transform: translate(-50%);
-  border-radius: 5px;
-  padding: 15px;
+  border-radius: 15px;
+  padding: 20px 30px;
   box-sizing: border-box;
+  z-index: 1;
+  border: 2px solid #ffffff1f;
 }
-header form .close {
+header .overlay .form-login .close-button {
   background: #afafaf;
   height: 20px;
   width: 3px;
@@ -128,7 +143,7 @@ header form .close {
   left: 98%;
   transform: rotate(45deg);
 }
-header form .close:after {
+header .overlay .form-login .close-button:after {
   content: "";
   height: 3px;
   width: 20px;
@@ -138,60 +153,59 @@ header form .close:after {
   top: 8px;
   transform: rotate(0deg);
 }
-header form .close:hover {
+header .overlay .form-login .close-button:hover {
   background: white;
 }
-header form .close:hover:after {
+header .overlay .form-login .close-button:hover:after {
   background: white;
 }
-header form h2 {
+header .overlay .form-login h2 {
   color: white;
   text-align: center;
   text-transform: none;
-  font-size: 25px;
-  margin-top: 0;
+  font-size: 30px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
-header form .social-buttons {
+header .overlay .form-login .social-buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  gap: 15px;
 }
-header form .social-buttons button {
-  height: 35px;
+header .overlay .form-login .social-buttons button {
+  height: 40px;
   flex-grow: 1;
-  border-radius: 5px;
+  border-radius: 20px;
   border: none;
   background-image: linear-gradient(to right, #e94e38 0%, #e96e58 51%, #e92727 100%);
   transition: 0.5s;
   background-size: 200% auto;
   display: block;
 }
-header form .social-buttons button:hover {
+header .overlay .form-login .social-buttons button:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
-header form .social-buttons button:hover a:before {
+header .overlay .form-login .social-buttons button:hover a:before {
   filter: drop-shadow(#fffaf3);
 }
-header form .social-buttons button:active {
+header .overlay .form-login .social-buttons button:active {
   background-image: linear-gradient(to right, #cb4331 0%, #c15b49 51%, #b51e1e 100%);
 }
-header form .social-buttons button:active a {
+header .overlay .form-login .social-buttons button:active a {
   filter: opacity(0.5);
 }
-header form .social-buttons button a {
+header .overlay .form-login .social-buttons button a {
   display: block;
   position: relative;
   color: white;
   text-decoration: none;
   font-size: 16px;
 }
-header form .social-buttons .facebook-button {
-  margin-right: 5px;
-}
-header form .social-buttons .facebook-button a:before {
+header .overlay .form-login .social-buttons .facebook-button a:before {
   content: '';
   position: absolute;
   top: 0px;
@@ -200,7 +214,7 @@ header form .social-buttons .facebook-button a:before {
   width: 14px;
   height: 20px;
 }
-header form .social-buttons .google-button a:before {
+header .overlay .form-login .social-buttons .google-button a:before {
   content: '';
   position: absolute;
   top: 0px;
@@ -209,42 +223,189 @@ header form .social-buttons .google-button a:before {
   width: 20px;
   height: 20px;
 }
-header form input {
+header .overlay .form-login input {
   width: 100%;
   margin-top: 5px;
-  height: 30px;
-  border-radius: 5px;
+  height: 40px;
+  border-radius: 20px;
   border: none;
   box-sizing: border-box;
   padding: 5px;
 }
-header form input:focus {
+header .overlay .form-login input:focus {
   outline: none;
 }
-header form label {
+header .overlay .form-login label {
   color: white;
 }
-header form .login-button {
+header .overlay .form-login .login-button {
   margin-top: 15px;
-  height: 35px;
+  height: 40px;
   flex-grow: 1;
   border: none;
   color: white;
   font-family: Gotham-Medium;
-  border-radius: 5px;
+  border-radius: 20px;
   background-image: linear-gradient(to right, #e94e38 0%, #e96e58 51%, #e92727 100%);
   transition: 0.5s;
   background-size: 200% auto;
   display: block;
+  font-size: 18px;
 }
-header form .login-button:hover {
+header .overlay .form-login .login-button:hover {
   background-position: right center;
   /* change the direction of the change here */
   text-decoration: none;
 }
-header form .login-button:active {
+header .overlay .form-login .login-button:active {
   background-image: linear-gradient(to right, #cb4331 0%, #c15b49 51%, #b51e1e 100%);
   color: rgba(255, 255, 255, 0.55);
+  outline: none;
+}
+header .overlay .form-login .login-button:focus {
+  outline: none;
+}
+header .search-block {
+  background: url("../images/pattern.png"), url("../images/search-background.jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 60px 0 40px 0;
+  background-position-y: -95px;
+}
+header .search-block .search-form {
+  width: 475px;
+  margin: 0 auto;
+  position: relative;
+}
+header .search-block .search-form h2 {
+  text-transform: none;
+  font-size: 30px;
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  margin-left: 35px;
+  margin-bottom: 30px;
+}
+header .search-block .search-form .dropdown-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr {
+  width: 223px;
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  background: #ffffff14;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1);
+  cursor: pointer;
+  outline: none;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: none;
+  box-sizing: border-box;
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr span {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Verdana;
+  opacity: 0.8;
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  right: 25px;
+  top: 40%;
+  border-left: 3px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.85);
+  transform: rotate(-45deg);
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr .dropdown {
+  /* Size &amp; position */
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  /* Styles */
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-weight: normal;
+  transition: all 0.5s ease-in;
+  list-style: none;
+  padding-left: 0;
+  /* Hiding */
+  display: none;
+  pointer-events: auto;
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr .dropdown:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  right: 15px;
+  border-width: 0 6px 6px 6px;
+  border-style: solid;
+  border-color: #fff transparent;
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr .dropdown li :hover a {
+  background: #f3f8f8;
+}
+header .search-block .search-form .dropdown-flex .dropdown-wr .dropdown li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #8aa8bd;
+  border-bottom: 1px solid #e6e8ea;
+  box-shadow: inset 0 1px 0 #ffffff;
+  transition: all 0.3s ease-out;
+}
+header .search-block .search-form input {
+  width: 100%;
+  padding: 15px;
+  padding-left: 30px;
+  background: #ffffff14;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1);
+  cursor: pointer;
+  outline: none;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-top: 5px;
+}
+header .search-block .search-form .search-button {
+  display: block;
+  margin: 25px auto ;
+  width: 140px;
+  padding: 23px;
+  background-color: #e94e38;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 40px;
+  font-family: Gotham-Medium;
+  border: none;
+}
+header .search-block .search-form .search-button:hover {
+  box-shadow: inset 3px 1px 20px 8px #83281d9e;
+  color: rgba(255, 255, 255, 0.85);
+  outline: none;
+  border: none;
+}
+header .search-block .search-form .search-button:active {
+  box-shadow: inset 3px 1px 20px 19px rgba(116, 20, 17, 0.62);
+  color: rgba(255, 255, 255, 0.55);
+  outline: none;
+  border: none;
+}
+header .search-block .search-form .search-button:focus {
   outline: none;
 }
 @font-face {

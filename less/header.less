@@ -389,24 +389,23 @@ header {
                     }
 
                     .dropdown{
-                        /* Size &amp; position */
                         position: absolute;
-                        top: 140%;
-                        left: 0;
+                        top: 105%;
+                        left: 7px;
                         right: 0;
-
-                        /* Styles */
-                        background: white;
-                        border: 1px solid rgba(0,0,0,0.17);
-                        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+                        background: #ffffffed;
+                        border: 1px solid rgba(0, 0, 0, 0.17);
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
                         font-weight: normal;
                         transition: all 0.5s ease-in;
                         list-style: none;
                         padding-left: 0;
-
-                        /* Hiding */
                         display: none;
                         pointer-events: auto;
+                        width: 200px;
+                        border-radius: 20px;
+                        padding: 5px;
+                        box-sizing: border-box;
 
                         &:after {
                             content: "";
@@ -417,24 +416,29 @@ header {
                             right: 15px;
                             border-width: 0 6px 6px 6px;
                             border-style: solid;
-                            border-color: #fff transparent;
+                            border-color: rgba(255, 255, 255, 0.95) transparent;
                         }
 
                         li {
 
-                            :hover  {
+                            &:not(:last-child){
+                                border-bottom: 2px solid @lightgrey;
+                            }
+
+                            &:hover  {
                                 a{
-                                    background: #f3f8f8;
+                                    color: #6E7778;
                                 }
                             }
+
                             a {
                                 display: block;
-                                padding: 10px;
+                                padding: 12px;
                                 text-decoration: none;
-                                color: #8aa8bd;
-                                border-bottom: 1px solid #e6e8ea;
-                                box-shadow: inset 0 1px 0 rgba(255,255,255,1);
                                 transition: all 0.3s ease-out;
+                                color: @darkgrey;
+
+
                             }
                         }
                     }

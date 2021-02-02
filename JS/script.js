@@ -45,22 +45,27 @@ closeButton.addEventListener('click', function () {
 
 //search-form
 
-let dropDown = document.querySelector(".dropdown-wr-country"),
-    select = $('.dropdown-country'),
+let dropDownCountry = document.querySelector(".dropdown-wr-country"),
+    selectCountry = $('.dropdown-country'),
     countryItem = document.querySelectorAll('.country'),
     selectedCountry = $('.selected-country');
 
 let dropDownAction = document.querySelector(".dropdown-wr-action"),
     selectAction = $('.dropdown-action'),
-    countryItemAction = document.querySelectorAll('.action'),
-    selectedCountryAction = $('.selected-action');
+    actionItem = document.querySelectorAll('.action'),
+    selectedAction = $('.selected-action');
+
+let dropDownPlace = document.querySelector(".dropdown-wr-place"),
+    selectPlace = $('.dropdown-place'),
+    placeItem = document.querySelectorAll('.place'),
+    selectedPlace = $('.selected-place');
 
 
-dropDown.addEventListener('click', function () {
-    if (!select.is(':visible')) {
-        select.css('display', 'block');
+dropDownCountry.addEventListener('click', function () {
+    if (!selectCountry.is(':visible')) {
+        selectCountry.css('display', 'block');
     } else {
-        select.css('display', 'none');
+        selectCountry.css('display', 'none');
     }
 });
 
@@ -79,12 +84,50 @@ dropDownAction.addEventListener('click', function () {
     }
 });
 
-for (let i = 0; i < countryItemAction.length; i++) {
-    countryItemAction[i].addEventListener('click', function (e) {
-        let valueCountryAction = $(countryItemAction[i]).html();
-        selectedCountryAction.text(valueCountryAction);
+for (let i = 0; i < actionItem.length; i++) {
+    actionItem[i].addEventListener('click', function (e) {
+        let valueCountryAction = $(actionItem[i]).html();
+        selectedAction.text(valueCountryAction);
     });
 }
+
+dropDownPlace.addEventListener('click', function () {
+    if (!selectPlace.is(':visible')) {
+        selectPlace.css('display', 'block');
+    } else {
+        selectPlace.css('display', 'none');
+    }
+});
+
+for (let i = 0; i < placeItem.length; i++) {
+    placeItem[i].addEventListener('click', function (e) {
+        let valueCountryPlace = $(placeItem[i]).html();
+        selectedPlace.text(valueCountryPlace);
+    });
+}
+
+//main
+
+//filter-block
+
+let mapButton =  document.querySelector(".map-toggle");
+
+mapButton.addEventListener('click',function () {
+
+    if (mapButton.classList.contains('hide')) {
+        mapButton.classList.remove('hide');
+        mapButton.classList.add('show');
+        mapButton.textContent="hide map";
+    } else {
+        mapButton.classList.remove('show');
+        mapButton.classList.add('hide');
+        mapButton.textContent="show map";
+    }
+});
+
+
+
+
 
 
 

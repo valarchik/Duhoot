@@ -1,0 +1,181 @@
+main {
+
+    .filter-block {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: @darkgrey;
+        padding: 10px;
+
+        .sort {
+            padding: 10px;
+
+            ul {
+                margin: 0;
+
+                li {
+                    display: inline-block;
+                    list-style-type: none;
+
+                    &:not(:last-of-type) {
+                        margin-right: 25px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+
+                        &:focus {
+                            color: @red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .place-block {
+            margin: 0 100px;
+            font-style: @default-font-family;
+
+            .dropdown-wr {
+                display: inline-block;
+                width: 135px;
+                position: relative;
+                padding: 15px;
+                padding-left: 20px;
+                border-radius: 33px;
+                border: 1px solid @grey;
+                cursor: pointer;
+                outline: none;
+                color: @red;
+                text-transform: uppercase;
+                box-sizing: border-box;
+                margin-right: 10px;
+
+                .selected {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+
+                &:after {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    right: 18px;
+                    top: 35%;
+                    border-left: 3px solid @grey;
+                    border-bottom: 3px solid @grey;
+                    transform: rotate(-45deg);
+                }
+
+                .dropdown {
+                    /* Size &amp; position */
+                    position: absolute;
+                    top: 140%;
+                    left: 0;
+                    right: 0;
+                    margin-right: 10px;
+
+                    /* Styles */
+                    background: white;
+                    border: 1px solid rgba(0,0,0,0.17);
+                    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+                    font-weight: normal;
+                    transition: all 0.5s ease-in;
+                    list-style: none;
+                    padding-left: 0;
+
+                    /* Hiding */
+                    display: none;
+                    pointer-events: auto;
+
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        bottom: 100%;
+                        right: 15px;
+                        border-width: 0 6px 6px 6px;
+                        border-style: solid;
+                        border-color: #fff transparent;
+                    }
+
+                    li {
+                        &:hover {
+                            a {
+                                background: #f3f8f8;
+                            }
+                        }
+                        a {
+                            display: block;
+                            padding: 10px;
+                            text-decoration: none;
+                            color: #8aa8bd;
+                            border-bottom: 1px solid #e6e8ea;
+                            box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+                            transition: all 0.3s ease-out;
+                        }
+                    }
+                }
+            }
+
+            .map-toggle {
+                display: inline-block;
+                width: 135px;
+                position: relative;
+                padding: 15px;
+                padding-left: 20px;
+                border-radius: 33px;
+                cursor: pointer;
+                outline: none;
+                text-transform: uppercase;
+                box-sizing: border-box;
+                font-family: inherit;
+                font-size: 12px;
+                text-align: start;
+
+
+            }
+
+            .hide {
+                border: 1px solid #b6c0c1;
+                background: white;
+                color: @darkgrey;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 30%;
+                    left: 80%;
+                    background: url(../images/icon-sprite.png) -49px 0 no-repeat;
+                    width: 8px;
+                    height: 15px;
+                }
+            }
+
+            .show {
+                border: none;
+                background: @green;
+                color:white;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 30%;
+                    left: 80%;
+                    background: url(../images/icon-sprite.png) -49px -17px no-repeat;
+                    width: 8px;
+                    height: 15px;
+                }
+            }
+        }
+
+        .filter {
+
+        }
+    }
+}

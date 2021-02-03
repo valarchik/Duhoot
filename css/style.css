@@ -24,7 +24,7 @@ header .container-head .head-block .global-navigation .logo {
 header .container-head .head-block .global-navigation .navigation {
   margin: 0;
   padding: 30px 0;
-  padding-left: 70px;
+  padding-left: 100px;
 }
 header .container-head .head-block .global-navigation .navigation li {
   display: inline-block;
@@ -76,6 +76,7 @@ header .container-head .head-block .global-navigation .global-search .search-ico
   background: url("../images/icon-sprite.png") left top no-repeat;
   width: 23px;
   height: 23px;
+  cursor: pointer;
 }
 header .container-head .head-block .global-navigation .global-search .search-icon:hover {
   filter: contrast(0.6);
@@ -251,6 +252,7 @@ header .overlay .form-login .login-button {
   background-size: 200% auto;
   display: block;
   font-size: 18px;
+  cursor: pointer;
 }
 header .overlay .form-login .login-button:hover {
   background-position: right center;
@@ -394,6 +396,7 @@ header .search-block .search-form .search-button {
   border-radius: 40px;
   font-family: Gotham-Medium;
   border: none;
+  cursor: pointer;
 }
 header .search-block .search-form .search-button:hover {
   box-shadow: inset 3px 1px 20px 8px #83281d9e;
@@ -412,15 +415,17 @@ header .search-block .search-form .search-button:focus {
 }
 main .filter-block {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-transform: uppercase;
   font-size: 12px;
   color: #9ca9aa;
   padding: 10px;
+  border-bottom: 1px solid #b6c0c1;
 }
 main .filter-block .sort {
   padding: 10px;
+  margin-left: 150px;
 }
 main .filter-block .sort ul {
   margin: 0;
@@ -432,6 +437,9 @@ main .filter-block .sort ul li {
 main .filter-block .sort ul li:not(:last-of-type) {
   margin-right: 25px;
 }
+main .filter-block .sort ul li:first-of-type {
+  color: #e94e38;
+}
 main .filter-block .sort ul li a {
   text-decoration: none;
   color: inherit;
@@ -440,7 +448,6 @@ main .filter-block .sort ul li a:focus {
   color: #e94e38;
 }
 main .filter-block .place-block {
-  margin: 0 100px;
   font-style: 'Gotham Medium';
 }
 main .filter-block .place-block .dropdown-wr {
@@ -556,6 +563,43 @@ main .filter-block .place-block .show:before {
   background: url(../images/icon-sprite.png) -49px -17px no-repeat;
   width: 8px;
   height: 15px;
+}
+main .filter-block .filter {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+}
+main .filter-block .filter .filter-title {
+  margin-right: 10px;
+}
+main .filter-block .filter .filter-item {
+  width: 40px;
+  height: 40px;
+  background-color: #b6c0c1;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+main .filter-block .filter .filter-item:hover {
+  filter: grayscale(1);
+}
+main .filter-block .filter .filter-item:nth-child(2) {
+  background: #1baf5d url(../images/icon-sprite.png) -56px 10px no-repeat;
+}
+main .filter-block .filter .filter-item:nth-child(3) {
+  background: #b6c0c1 url(../images/icon-sprite.png) -109.5px 6px no-repeat;
+  background-size: cover;
+}
+main .filter-block .filter .filter-item:nth-child(4) {
+  background: #b6c0c1 url(../images/icon-sprite.png) -113px 10px no-repeat;
+}
+main .filter-block .filter .filter-item:nth-child(5) {
+  background: #f19e1f url(../images/icon-sprite.png) -186px 8px no-repeat;
+  background-size: cover;
+}
+main .filter-block .filter .filter-item:nth-child(6) {
+  background: #88499c url(../images/icon-sprite.png) -217px 10px no-repeat;
+  background-size: cover;
 }
 @font-face {
   font-family: 'Gotham Medium';

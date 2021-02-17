@@ -251,6 +251,7 @@ main {
     }
 
     &:hover {
+
         img {
             filter: blur(2px);
         }
@@ -368,52 +369,36 @@ main {
         }
     }
 
-    .rating-choose {
-        overflow: hidden;
-        width: 85px;
+    .star-rating {
+        font-size: 0;
         display: inline-block;
-        margin: 15px 10px;
+        margin: 20px 10px;
 
-        &:not(:checked) input {
+        &__wrap {
+            display: block;
+            font-size: 12px;
+        }
+
+        &__ico {
+            float: right;
+            padding-left: 2px;
+            cursor: pointer;
+            color: #ffffff;
+
+            &:last-child {
+                padding-left: 0;
+            }
+        }
+
+        &__input {
             display: none;
         }
+    }
 
-        &:not(:checked) > label {
-            float: right;
-            width: 17px;
-            padding: 0;
-            cursor: pointer;
-            font-size: 20px;
-            color: #ffffff;
-            text-shadow: 1px 1px #bbb;
-
-            &:before {
-                content: '☆';
-            }
-
-            &:hover ~ label {
-                &:before {
-                    content: '★';
-                    color: white;
-                }
-            }
-        }
-
-        & > input:checked ~ label,
-        & > input:checked + label:hover,
-        & > input:checked + label:hover ~ label,
-        & > input:checked ~ label:hover,
-        & > input:checked ~ label:hover ~ label,
-        & > label:hover ~ input:checked ~ label {
-            &:before {
-                content: '★';
-                color: white;
-            }
-        }
-
-        & > label:active {
-            position: relative;
-        }
+    .star-rating__ico:hover:before,
+    .star-rating__ico:hover ~ .star-rating__ico:before,
+    .star-rating__input:checked ~ .star-rating__ico:before {
+        content: "\f005";
     }
 
     a {
@@ -421,7 +406,7 @@ main {
         width: 25px;
         height: 20px;
         background: url(../images/icon-sprite.png) -316px -14px no-repeat;
-        margin-top: 20px;
+        margin-top: 15px;
         vertical-align: top;
     }
 }
@@ -437,44 +422,44 @@ main {
         height: 55px;
     }
 
-        .title-info {
-            text-transform: uppercase;
-            color: @green;
-            text-align: center;
+    .title-info {
+        text-transform: uppercase;
+        color: @green;
+        text-align: center;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .rating-mini {
+        font-size: 0;
+        width: 62%;
+        margin: 0 auto;
+        display: block;
+
+        span {
+            padding: 0;
+            font-size: 16px;
+            line-height: 1;
+            color: lightgrey;
+            font-family: Calibri;
+
+            &:before {
+                content: '★';
+            }
+
+            &.active {
+                color: @yellow;
+            }
+        }
+
+        p {
             font-size: 12px;
+            display: inline-block;
+            color: @grey;
             margin: 0;
+            padding-left: 5px;
         }
-
-        .rating-mini {
-            font-size: 0;
-            width: 62%;
-            margin: 0 auto;
-            display: block;
-
-            span {
-                padding: 0;
-                font-size: 16px;
-                line-height: 1;
-                color: lightgrey;
-
-                &:before {
-                    content: '★';
-                }
-
-                &.active {
-                    color: @yellow;
-                }
-            }
-
-            p {
-                font-size: 12px;
-                display: inline-block;
-                color: @grey;
-                margin: 0;
-                padding-left: 5px;
-            }
-        }
-
+    }
 }
 
 // big items styles
@@ -530,23 +515,17 @@ main {
         }
 
         .hide-information {
-            button{
+            button {
                 margin: 0;
                 margin-left: auto;
                 width: 40%;
                 display: block;
             }
-            .rating-choose {
-                display: block;
-                width: 100px;
+
+            .star-rating {
                 margin: 0;
                 position: absolute;
-                top: 20%;
-
-                &:not(:checked) > label {
-                    width: 20px;
-                    font-size: 24px;
-                }
+                top: 30px;
             }
 
             a {
@@ -604,7 +583,6 @@ main {
                 &:before {
                     content: '★';
                 }
-
                 &.active {
                     color:@yellow
                 }
@@ -615,6 +593,7 @@ main {
             margin: 10px 0;
             text-transform: uppercase;
         }
+
         .text-info {
             margin-top: 10px;
             font-size: 14px;

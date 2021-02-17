@@ -721,49 +721,38 @@ main {
   background-size: 385px;
   top: 25%;
 }
-.hide-information .rating-choose {
-  overflow: hidden;
-  width: 85px;
+.hide-information .star-rating {
+  font-size: 0;
   display: inline-block;
-  margin: 15px 10px;
+  margin: 20px 10px;
 }
-.hide-information .rating-choose:not(:checked) input {
+.hide-information .star-rating__wrap {
+  display: block;
+  font-size: 12px;
+}
+.hide-information .star-rating__ico {
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.hide-information .star-rating__ico:last-child {
+  padding-left: 0;
+}
+.hide-information .star-rating__input {
   display: none;
 }
-.hide-information .rating-choose:not(:checked) > label {
-  float: right;
-  width: 17px;
-  padding: 0;
-  cursor: pointer;
-  font-size: 20px;
-  color: #ffffff;
-  text-shadow: 1px 1px #bbb;
-}
-.hide-information .rating-choose:not(:checked) > label:before {
-  content: '☆';
-}
-.hide-information .rating-choose:not(:checked) > label:hover ~ label:before {
-  content: '★';
-  color: white;
-}
-.hide-information .rating-choose > input:checked ~ label:before,
-.hide-information .rating-choose > input:checked + label:hover:before,
-.hide-information .rating-choose > input:checked + label:hover ~ label:before,
-.hide-information .rating-choose > input:checked ~ label:hover:before,
-.hide-information .rating-choose > input:checked ~ label:hover ~ label:before,
-.hide-information .rating-choose > label:hover ~ input:checked ~ label:before {
-  content: '★';
-  color: white;
-}
-.hide-information .rating-choose > label:active {
-  position: relative;
+.hide-information .star-rating__ico:hover:before,
+.hide-information .star-rating__ico:hover ~ .star-rating__ico:before,
+.hide-information .star-rating__input:checked ~ .star-rating__ico:before {
+  content: "\f005";
 }
 .hide-information a {
   display: inline-block;
   width: 25px;
   height: 20px;
   background: url(../images/icon-sprite.png) -316px -14px no-repeat;
-  margin-top: 20px;
+  margin-top: 15px;
   vertical-align: top;
 }
 .information-post {
@@ -794,6 +783,7 @@ main {
   font-size: 16px;
   line-height: 1;
   color: lightgrey;
+  font-family: Calibri;
 }
 .information-post .rating-mini span:before {
   content: '★';
@@ -857,16 +847,10 @@ main {
   width: 40%;
   display: block;
 }
-.item-post-big .image-post .hide-information .rating-choose {
-  display: block;
-  width: 100px;
+.item-post-big .image-post .hide-information .star-rating {
   margin: 0;
   position: absolute;
-  top: 20%;
-}
-.item-post-big .image-post .hide-information .rating-choose:not(:checked) > label {
-  width: 20px;
-  font-size: 24px;
+  top: 30px;
 }
 .item-post-big .image-post .hide-information a {
   display: block;

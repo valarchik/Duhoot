@@ -20,9 +20,9 @@
 
     .features {
         width: fit-content;
-        margin: 70px auto 40px;
+        margin: 70px auto 0;
 
-        ul{
+        ul {
             padding: 0;
         }
 
@@ -47,6 +47,7 @@
                     }
                     border-color: @yellow;
                 }
+
                 &.transport,&.education{
                     i:before{
                         color: @purple;
@@ -55,18 +56,18 @@
                 }
             }
 
-            &:hover{
+            &:hover {
                 border-color: @green;
 
-                i{
+                i {
                     color: @green;
                 }
             }
 
-            &:not(:last-of-type){
-
+            &:not(:last-of-type) {
                 margin-right: 60px;
-                &:after{
+
+                &:after {
                     content: "";
                     position: absolute;
                     width: 55px;
@@ -75,7 +76,6 @@
                     left: 106%;
                 }
             }
-
 
             i {
                 position: absolute;
@@ -86,8 +86,8 @@
                 color: @grey;
             }
 
-            &.transport,&.education{
-                &:hover{
+            &.transport,&.education {
+                &:hover {
                     border-color: @purple;
 
                     i{
@@ -95,11 +95,12 @@
                     }
                 }
             }
-            &.event, &.people{
-                &:hover{
+
+            &.event, &.people {
+                &:hover {
                     border-color: @yellow;
 
-                    i{
+                    i {
                         color: @yellow;
                     }
                 }
@@ -119,11 +120,14 @@
 
             p {
                 display: inline-block;
-                width: 300px;
-                padding-left: 80px;
-                color: @postgrey;
+                width: 270px;
+                padding-left: 100px;
+                color: #566375;
                 position: relative;
                 vertical-align: top;
+                margin: 0 auto;
+                font-family: Verdana;
+                font-size: 14px;
 
                 &:before {
                     content: '';
@@ -132,8 +136,8 @@
                     height: 63px;
                     border-radius:50%;
                     position: absolute;
-                    left: -10px;
-                    background: #1BAF53 url(../images/icon-sprite.png) -449px 4px no-repeat;
+                    left: 5px;
+                    background: #1BAF53 url(../images/icon-sprite.png) -453px 4px no-repeat;
                     background-size: cover;
                 }
 
@@ -141,7 +145,7 @@
                     margin-right:35px;
 
                     &:before {
-                        background: #1BAF53 url(../images/icon-sprite.png) -402px 4px no-repeat;
+                        background: #1BAF53 url(../images/icon-sprite.png) -407px 4px no-repeat;
                         background-size: cover;
                     }
                 }
@@ -155,6 +159,7 @@
                      background-color: @yellow ;
                  }
              }
+
             &.transport,&.education {
                 h3 {
                     color: @purple;
@@ -166,3 +171,4 @@
         }
     }
 }
+

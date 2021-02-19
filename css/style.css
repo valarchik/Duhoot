@@ -416,6 +416,7 @@ header .search-block .search-form .search-button:focus {
 main {
   background-color: #f3f1f2;
   font-family: 'Gotham Medium';
+  padding-bottom: 140px;
 }
 .filter-block {
   display: flex;
@@ -1029,7 +1030,7 @@ main {
 }
 .features-block .features {
   width: fit-content;
-  margin: 70px auto 40px;
+  margin: 70px auto 0;
 }
 .features-block .features ul {
   padding: 0;
@@ -1117,11 +1118,14 @@ main {
 }
 .features-block .features .feature-information p {
   display: inline-block;
-  width: 300px;
-  padding-left: 80px;
+  width: 270px;
+  padding-left: 100px;
   color: #566375;
   position: relative;
   vertical-align: top;
+  margin: 0 auto;
+  font-family: Verdana;
+  font-size: 14px;
 }
 .features-block .features .feature-information p:before {
   content: '';
@@ -1130,15 +1134,15 @@ main {
   height: 63px;
   border-radius: 50%;
   position: absolute;
-  left: -10px;
-  background: #1BAF53 url(../images/icon-sprite.png) -449px 4px no-repeat;
+  left: 5px;
+  background: #1BAF53 url(../images/icon-sprite.png) -453px 4px no-repeat;
   background-size: cover;
 }
 .features-block .features .feature-information p:first-of-type {
   margin-right: 35px;
 }
 .features-block .features .feature-information p:first-of-type:before {
-  background: #1BAF53 url(../images/icon-sprite.png) -402px 4px no-repeat;
+  background: #1BAF53 url(../images/icon-sprite.png) -407px 4px no-repeat;
   background-size: cover;
 }
 .features-block .features .feature-information.people h3,

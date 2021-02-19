@@ -1,0 +1,168 @@
+
+.features-block {
+    padding-top: 90px;
+
+    h1 {
+        font-size: 22px;
+        font-weight: normal;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        color: @postgrey;
+    }
+
+    p {
+        width: fit-content;
+        margin: 10px auto;
+        color: #bfbfbf;
+        font-family: Verdana;
+    }
+
+    .features {
+        width: fit-content;
+        margin: 70px auto 40px;
+
+        ul{
+            padding: 0;
+        }
+
+        .feature-item {
+            border: 2.5px solid @grey;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            display: inline-block;
+
+            &.ui-tabs-active{
+
+                i:before{
+                    color: @green;
+                }
+                border-color: @green ;
+
+                &.people,&.event{
+                    i:before{
+                        color: @yellow;
+                    }
+                    border-color: @yellow;
+                }
+                &.transport,&.education{
+                    i:before{
+                        color: @purple;
+                    }
+                    border-color: @purple;
+                }
+            }
+
+            &:hover{
+                border-color: @green;
+
+                i{
+                    color: @green;
+                }
+            }
+
+            &:not(:last-of-type){
+
+                margin-right: 60px;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 55px;
+                    border-bottom:2.5px solid @lightgrey ;
+                    top: 50%;
+                    left: 106%;
+                }
+            }
+
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 45px;
+                color: @grey;
+            }
+
+            &.transport,&.education{
+                &:hover{
+                    border-color: @purple;
+
+                    i{
+                        color: @purple;
+                    }
+                }
+            }
+            &.event, &.people{
+                &:hover{
+                    border-color: @yellow;
+
+                    i{
+                        color: @yellow;
+                    }
+                }
+            }
+        }
+
+        .feature-information {
+            width: fit-content;
+
+            h3 {
+            width: fit-content;
+            margin: 40px auto 40px;
+            font-size: 24px;
+            font-weight: normal;
+            color: @green;
+            }
+
+            p {
+                display: inline-block;
+                width: 300px;
+                padding-left: 80px;
+                color: @postgrey;
+                position: relative;
+                vertical-align: top;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 63px;
+                    height: 63px;
+                    border-radius:50%;
+                    position: absolute;
+                    left: -10px;
+                    background: #1BAF53 url(../images/icon-sprite.png) -449px 4px no-repeat;
+                    background-size: cover;
+                }
+
+                &:first-of-type {
+                    margin-right:35px;
+
+                    &:before {
+                        background: #1BAF53 url(../images/icon-sprite.png) -402px 4px no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            &.people, &.event {
+                 h3 {
+                     color: @yellow;
+                 }
+                 p:before {
+                     background-color: @yellow ;
+                 }
+             }
+            &.transport,&.education {
+                h3 {
+                    color: @purple;
+                }
+                p:before {
+                    background-color: @purple ;
+                }
+            }
+        }
+    }
+}

@@ -599,10 +599,10 @@ main {
   grid-gap: 30px 35px;
   margin: 0 auto;
   padding-top: 45px;
-  width: 65%;
+  width: fit-content;
   justify-content: center;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #b6c0c1;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2dee0;
 }
 .item-post {
   height: 265px;
@@ -1009,6 +1009,153 @@ main {
 }
 .load:hover:after {
   transform: translate(10px);
+}
+.features-block {
+  padding-top: 90px;
+}
+.features-block h1 {
+  font-size: 22px;
+  font-weight: normal;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: #566375;
+}
+.features-block p {
+  width: fit-content;
+  margin: 10px auto;
+  color: #bfbfbf;
+  font-family: Verdana;
+}
+.features-block .features {
+  width: fit-content;
+  margin: 70px auto 40px;
+}
+.features-block .features ul {
+  padding: 0;
+}
+.features-block .features .feature-item {
+  border: 2.5px solid #b6c0c1;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: inline-block;
+}
+.features-block .features .feature-item.ui-tabs-active {
+  border-color: #1baf5d;
+}
+.features-block .features .feature-item.ui-tabs-active i:before {
+  color: #1baf5d;
+}
+.features-block .features .feature-item.ui-tabs-active.people,
+.features-block .features .feature-item.ui-tabs-active.event {
+  border-color: #f19e1f;
+}
+.features-block .features .feature-item.ui-tabs-active.people i:before,
+.features-block .features .feature-item.ui-tabs-active.event i:before {
+  color: #f19e1f;
+}
+.features-block .features .feature-item.ui-tabs-active.transport,
+.features-block .features .feature-item.ui-tabs-active.education {
+  border-color: #88499c;
+}
+.features-block .features .feature-item.ui-tabs-active.transport i:before,
+.features-block .features .feature-item.ui-tabs-active.education i:before {
+  color: #88499c;
+}
+.features-block .features .feature-item:hover {
+  border-color: #1baf5d;
+}
+.features-block .features .feature-item:hover i {
+  color: #1baf5d;
+}
+.features-block .features .feature-item:not(:last-of-type) {
+  margin-right: 60px;
+}
+.features-block .features .feature-item:not(:last-of-type):after {
+  content: "";
+  position: absolute;
+  width: 55px;
+  border-bottom: 2.5px solid #e2dee0;
+  top: 50%;
+  left: 106%;
+}
+.features-block .features .feature-item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  color: #b6c0c1;
+}
+.features-block .features .feature-item.transport:hover,
+.features-block .features .feature-item.education:hover {
+  border-color: #88499c;
+}
+.features-block .features .feature-item.transport:hover i,
+.features-block .features .feature-item.education:hover i {
+  color: #88499c;
+}
+.features-block .features .feature-item.event:hover,
+.features-block .features .feature-item.people:hover {
+  border-color: #f19e1f;
+}
+.features-block .features .feature-item.event:hover i,
+.features-block .features .feature-item.people:hover i {
+  color: #f19e1f;
+}
+.features-block .features .feature-information {
+  width: fit-content;
+}
+.features-block .features .feature-information h3 {
+  width: fit-content;
+  margin: 40px auto 40px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #1baf5d;
+}
+.features-block .features .feature-information p {
+  display: inline-block;
+  width: 300px;
+  padding-left: 80px;
+  color: #566375;
+  position: relative;
+  vertical-align: top;
+}
+.features-block .features .feature-information p:before {
+  content: '';
+  display: block;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  background: #1BAF53 url(../images/icon-sprite.png) -449px 4px no-repeat;
+  background-size: cover;
+}
+.features-block .features .feature-information p:first-of-type {
+  margin-right: 35px;
+}
+.features-block .features .feature-information p:first-of-type:before {
+  background: #1BAF53 url(../images/icon-sprite.png) -402px 4px no-repeat;
+  background-size: cover;
+}
+.features-block .features .feature-information.people h3,
+.features-block .features .feature-information.event h3 {
+  color: #f19e1f;
+}
+.features-block .features .feature-information.people p:before,
+.features-block .features .feature-information.event p:before {
+  background-color: #f19e1f;
+}
+.features-block .features .feature-information.transport h3,
+.features-block .features .feature-information.education h3 {
+  color: #88499c;
+}
+.features-block .features .feature-information.transport p:before,
+.features-block .features .feature-information.education p:before {
+  background-color: #88499c;
 }
 @font-face {
   font-family: 'Gotham Medium';

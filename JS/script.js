@@ -125,6 +125,10 @@ mapButton.addEventListener('click',function () {
     }
 });
 
+// feature-block
+
+$("#tabs").tabs();
+
 
 
 

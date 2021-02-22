@@ -1161,6 +1161,135 @@ main {
 .features-block .features .feature-information.education p:before {
   background-color: #88499c;
 }
+footer {
+  background: url("../images/search-background.jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 60px 0 40px;
+}
+footer .subscribe-block {
+  width: 65%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+footer .subscribe-block h3 {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+}
+footer .subscribe-block .subscribe-item {
+  width: 505px;
+  height: 65px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.11);
+  border-radius: 50px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+footer .subscribe-block .subscribe-item:before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  width: 20px;
+  height: 15px;
+  background: url(../images/icon-sprite.png) -444px -17px no-repeat;
+}
+footer .subscribe-block .subscribe-item input[type="email"] {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  left: 60px;
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-family: Verdana;
+}
+footer .subscribe-block .subscribe-item input[type="email"]:focus {
+  outline: none;
+}
+footer .subscribe-block .subscribe-item input[type="email"]::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+footer .subscribe-block .subscribe-item input[type="email"]::-moz-placeholder {
+  color: rgba(226, 222, 224, 0.6);
+}
+footer .subscribe-block .subscribe-item button {
+  position: absolute;
+  top: 6%;
+  right: 1%;
+  width: 133px;
+  height: 88%;
+  border-radius: 40px;
+  border: none;
+  background-color: #e94e38;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+footer .subscribe-block .subscribe-item button:hover {
+  box-shadow: inset 3px 1px 20px 8px #83281d9e;
+  color: rgba(255, 255, 255, 0.85);
+  outline: none;
+  border: none;
+}
+footer .subscribe-block .subscribe-item button:active {
+  box-shadow: inset 3px 1px 20px 19px rgb(116 20 0.27419355%);
+  color: rgba(255, 255, 255, 0.55);
+  outline: none;
+}
+footer .subscribe-block .subscribe-item button:focus {
+  outline: none;
+}
+footer .bottom-footer {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Verdana;
+  font-size: 14px;
+  margin: 40px 150px 0 90px;
+}
+footer .bottom-footer .footer-title {
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'Gotham Medium';
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0;
+}
+footer .bottom-footer .footer-list {
+  margin-top: 0;
+}
+footer .bottom-footer .footer-list li {
+  list-style: none;
+  line-height: 24px;
+}
+footer .bottom-footer .socials .soc {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  margin-right: 5px;
+  background: url("../images/icon-sprite.png") -480px -7px no-repeat;
+}
+footer .bottom-footer .socials .soc.fb {
+  width: 23px;
+}
+footer .bottom-footer .socials .soc.tw {
+  background-position: -516px -6px;
+}
+footer .bottom-footer .socials .soc.gl {
+  background-position: -561px -6px;
+}
+footer .bottom-footer .socials .soc.yb {
+  background-position: -601px -6px;
+}
+footer .bottom-footer .copyright {
+  margin-top: 40%;
+  margin-bottom: 0;
+}
 @font-face {
   font-family: 'Gotham Medium';
   src: url('https://nomail.com.ua/files/eot/77171d8f5b5283f9d47a3434704bf944.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/77171d8f5b5283f9d47a3434704bf944.woff') format('woff'), url('https://nomail.com.ua/files/woff2/77171d8f5b5283f9d47a3434704bf944.woff2') format('woff2');

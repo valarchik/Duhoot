@@ -6,15 +6,22 @@ let searchIcon = document.querySelector(".search-icon");
 let searchIconQuery = $('.search-icon')
 
 searchIcon.addEventListener('click', function () {
-    if (!search.is(":visible") && !searchInput.is(":visible")) {
-        if(window.matchMedia('(max-width: 913px)').matches){
-            search.animate({width: "400px"}, 1000);
-            }else if(window.matchMedia('(max-width: 913px)').matches){
 
-        }
-        else{
+    if (!search.is(":visible") && !searchInput.is(":visible")) {
+
+        if(window.matchMedia('(max-width: 690px)').matches){
+
+            search.animate({width: "450px"}, 1000)
+
+            }else if (window.matchMedia('(max-width: 845px)').matches) {
+            search.animate({width: "300px"}, 1000)
+
+            }else if (window.matchMedia('(max-width: 910px)').matches) {
+        search.animate({width: "400px"}, 1000)
+    }else{
             search.animate({width: "450px"}, 1000);
         };
+
         search.css('display', 'block');
         searchInput.css('display', 'block');
     }

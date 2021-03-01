@@ -57,6 +57,7 @@ header {
                 .dropdown-nav {
                     display: inline-block;
 
+
                     .fa-bars {
                         display: none;
                         font-size: 36px;
@@ -104,18 +105,20 @@ header {
                     padding: 15px 0;
 
                     @media screen and (max-width: 450px) {
-                        padding: 20px 0;
 
                         img{
-                            width: 125px;
+                            width: 115px;
+                            padding: 4px 0;
                         }
                     }
                     @media screen and (max-width: 1054px) {
                         margin-right: auto;
                         padding: 15px;
+                        padding-right: 0;
                     }
+
                     @media screen and (max-width: 380px) {
-                    display: none;
+                        display: none;
                     }
                 }
 
@@ -127,7 +130,7 @@ header {
                     padding-left: 30px;
                     line-height: 18px;
 
-                    @media screen and (max-width: 855px){
+                    @media screen and (max-width: 855px) {
                         display: none;
                     }
                     @media screen and (max-width: 914px) {
@@ -180,16 +183,16 @@ header {
                         width: 0;
                         z-index: 1;
 
-                        @media screen and(max-width: 640px){
+                        @media screen and(max-width: 640px) {
                             padding-right: 0;
                         }
-                        @media screen and(max-width: 450px){
-                            padding: 25px;
-                            padding-right: 0;
-                        }
-                        @media screen and(max-width: 380px){
+                        @media screen and(max-width: 450px) {
                             padding: 23px;
-                            padding-right: 5px;
+                            padding-right: 25px;
+                        }
+                        @media screen and(max-width: 380px) {
+                            padding: 23px;
+                            padding-right: 15px;
                             right: 60px;
                         }
 
@@ -201,16 +204,16 @@ header {
                             height: 30px;
                             padding: 10px;
 
-                            @media screen and(max-width: 913px){
+                            @media screen and(max-width: 913px) {
                                 margin-left: auto;
                                 margin-right: 20px;
                                 width: 300px;
                             }
-                            @media screen and(max-width: 640px){
+                            @media screen and(max-width: 640px) {
                                 margin-left: auto;
                                 width: 230px;
                             }
-                            @media screen and(max-width: 443px){
+                            @media screen and(max-width: 443px) {
                                 width: 190px;
                                 margin-right: 0;
                             }
@@ -328,6 +331,10 @@ header {
             z-index: 1;
             border: 2px solid #ffffff1f;
 
+            @media screen and (max-width: 500px) {
+               width: 100%;
+            }
+
             .close-button {
                 background: rgb(175, 175, 175);
                 height: 20px;
@@ -419,6 +426,10 @@ header {
                         background: url(../images/icon-sprite.png) -644px -14px no-repeat;
                         width: 14px;
                         height: 20px;
+
+                        @media screen and (max-width: 430px) {
+                            left: 10%;
+                        }
                     }
                 }
 
@@ -432,6 +443,10 @@ header {
                         background: url(../images/icon-sprite.png) -674px -15px no-repeat;
                         width: 20px;
                         height: 20px;
+
+                        @media screen and (max-width: 430px) {
+                            left: 8%;
+                        }
                     }
                 }
             }
@@ -480,7 +495,7 @@ header {
                     outline: none;
                 }
 
-                &:focus{
+                &:focus {
                     outline: none;
                 }
             }
@@ -489,38 +504,53 @@ header {
 
     // search block
 
-    .search-block{
+    .search-block {
         background: url("../images/pattern.png"),
                     url("../images/search-background.jpg");
         background-size: cover;
         width: 100%;
-        padding: 60px 0 40px 0;
+        padding: 60px 0 1px 0;
         background-position-y: -95px;
 
-        .search-form{
+        @media screen and(max-width: 800px) {
+          background-size: auto;
+        }
+
+        .search-form {
             width: 475px;
             margin: 0 auto;
             position: relative;
-            @media screen and(max-width: 945px){
-                display: none;
+
+            @media screen and(max-width: 515px) {
+               width: 100%;
+                padding: 5px;
             }
 
-            h2{
+            h2 {
                 text-transform: none;
                 font-size: 30px;
                 color: white;
                 font-weight: 100;
                 margin: 0;
-                margin-left: 35px;
                 margin-bottom:30px;
+                text-align: center;
+
+                @media screen and(max-width: 515px) {
+                    font-size: 26px;
+                }
             }
 
-            .dropdown-flex{
+            .dropdown-flex {
                 display: flex;
                 justify-content:space-between;
                 margin-bottom: 15px;
 
-                .dropdown-wr{
+                @media screen and(max-width: 515px) {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .dropdown-wr {
                     width: 223px;
                     position: relative;
                     padding: 10px;
@@ -535,8 +565,13 @@ header {
                     text-transform: none;
                     box-sizing: border-box;
 
+                    @media screen and(max-width: 515px) {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
 
-                    span{
+
+                    span {
                         font-size: 18px;
                         line-height: 30px;
                         font-family: Verdana;
@@ -555,7 +590,7 @@ header {
                         transform: rotate(-45deg);
                     }
 
-                    .dropdown{
+                    .dropdown {
                         position: absolute;
                         top: 105%;
                         left: 7px;
@@ -573,6 +608,11 @@ header {
                         border-radius: 20px;
                         padding: 5px;
                         box-sizing: border-box;
+                        z-index: 1;
+
+                        @media screen and(max-width: 515px) {
+                            width: 95%;
+                        }
 
                         &:after {
                             content: "";
@@ -588,7 +628,7 @@ header {
 
                         li {
 
-                            &:not(:last-child){
+                            &:not(:last-child) {
                                 border-bottom: 2px solid @lightgrey;
                             }
 
@@ -612,7 +652,7 @@ header {
                 }
             }
 
-            input{
+            input {
                 width: 100%;
                 padding: 15px;
                 padding-left: 30px;
@@ -627,9 +667,15 @@ header {
                 box-sizing: border-box;
                 font-size: 18px;
                 margin-top: 5px;
+
+                @media screen and(max-width: 515px) {
+                   display: table;
+                    width: 90%;
+                    margin: 5px auto;
+                }
             }
 
-            .search-button{
+            .search-button {
                 display: block;
                 margin: 25px auto ;
                 width: 140px;
@@ -643,21 +689,21 @@ header {
                 border: none;
                 cursor: pointer;
 
-                &:hover{
+                &:hover {
                     box-shadow: inset 3px 1px 20px 8px #83281d9e;
                     color: rgba(255, 255, 255, 0.85);
                     outline: none;
                     border: none;
                 }
 
-                &:active{
+                &:active {
                     box-shadow: inset 3px 1px 20px 19px rgba(116, 20, 17, 0.62);
                     color: rgba(255, 255, 255, 0.55);
                     outline: none;
                     border: none;
                 }
 
-                &:focus{
+                &:focus {
                     outline: none;
                 }
             }

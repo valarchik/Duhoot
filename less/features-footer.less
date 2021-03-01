@@ -22,6 +22,10 @@
         width: fit-content;
         margin: 70px auto 0;
 
+        @media screen and(max-width: 405px){
+            display: none;
+        }
+
         ul {
             padding: 0;
         }
@@ -199,6 +203,10 @@ footer {
             border-radius: 50px;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.11);
+
+            @media screen and(max-width: 945px){
+                display: none;
+            }
 
             &:before{
                 content: '';

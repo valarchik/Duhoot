@@ -3,23 +3,120 @@ header {
     font-size: @default-font-size;
     position: relative;
 
+    @media screen and (max-width: 380px) {
+        padding-top: 10px;
+
+}
+
     // top-header
+
+    .logo-mobile {
+        display: none;
+
+        @media screen and (max-width: 380px) {
+            margin: 0 auto;
+            padding-bottom: 10px;
+            width: fit-content;
+            display: block;
+        }
+    }
 
     .container-head {
         background: linear-gradient(to right, #ffffff00 50%, @red 50%);
         display: flex;
         justify-content: center;
 
+        @media screen and (max-width: 520px) {
+            justify-content:flex-end;
+            background: none;
+        }
+        @media screen and (max-width: 380px) {
+            background: @lightgrey;
+        }
+
+
         .head-block {
             background-color: white;
-            margin-left: auto;
+
+            @media screen and (max-width: 1054px) {
+               width: 100%;
+            }
+            @media screen and (max-width: 380px) {
+                width: initial;
+            }
+
 
             .global-navigation {
                 display: flex;
                 position: relative;
 
+                @media screen and (max-width: 380px) {
+                    background: @lightgrey;
+                }
+
+                .dropdown-nav {
+                    display: inline-block;
+
+                    .fa-bars {
+                        display: none;
+                        font-size: 36px;
+                        color: @grey;
+                        cursor: pointer;
+
+
+                        @media screen and (max-width: 855px) {
+                            display: block;
+                            margin:20px 30px 20px ;
+                        }
+                        @media screen and (max-width: 380px) {
+                            display: block;
+                            margin-left: 15px;
+                            color: white;
+                        }
+                    }
+
+                    .drop-nav-content {
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                        width: 50vw;
+                        z-index: 1;
+                        right: 73px;
+                        top: 76px;
+
+                        &.show {display:block;}
+
+                        a {
+                            color: @grey;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+
+                            &:active {
+                                background-color:@lightgrey
+                            }
+                        }
+                    }
+                }
+
+
                 .logo {
                     padding: 15px 0;
+
+                    @media screen and (max-width: 450px) {
+                        padding: 20px 0;
+
+                        img{
+                            width: 125px;
+                        }
+                    }
+                    @media screen and (max-width: 1054px) {
+                        margin-right: auto;
+                        padding: 15px;
+                    }
+                    @media screen and (max-width: 380px) {
+                    display: none;
+                    }
                 }
 
                 // navigation
@@ -27,7 +124,15 @@ header {
                 .navigation {
                     margin: 0;
                     padding: 30px 0;
-                    padding-left: 100px;
+                    padding-left: 30px;
+                    line-height: 18px;
+
+                    @media screen and (max-width: 855px){
+                        display: none;
+                    }
+                    @media screen and (max-width: 914px) {
+                        font-size: 12px;
+                    }
 
                     li {
                         display: inline-block;
@@ -73,14 +178,42 @@ header {
                         background-color: #e2dee0;
                         top: 0;
                         width: 0;
+                        z-index: 1;
+
+                        @media screen and(max-width: 640px){
+                            padding-right: 0;
+                        }
+                        @media screen and(max-width: 450px){
+                            padding: 25px;
+                            padding-right: 0;
+                        }
+                        @media screen and(max-width: 380px){
+                            padding: 23px;
+                            padding-right: 5px;
+                            right: 60px;
+                        }
 
                         input {
                             display: none;
-                            width: 350px;
+                            width: 360px;
                             border-radius: 15px;
                             border: none;
                             height: 30px;
                             padding: 10px;
+
+                            @media screen and(max-width: 913px){
+                                margin-left: auto;
+                                margin-right: 20px;
+                                width: 300px;
+                            }
+                            @media screen and(max-width: 640px){
+                                margin-left: auto;
+                                width: 230px;
+                            }
+                            @media screen and(max-width: 443px){
+                                width: 190px;
+                                margin-right: 0;
+                            }
 
                             &:focus {
                                 outline: none;
@@ -108,10 +241,24 @@ header {
             background-color: @red;
             padding: 30px;
             padding-left: 70px;
-            margin-right: auto;
             color: white;
             position: relative;
             cursor: pointer;
+
+            @media screen and (max-width: 380px) {
+                background-color: @lightgrey;
+            }
+
+            p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-30%);
+
+                @media screen and (max-width: 1070px) {
+                    display: none;
+                }
+            }
 
             &:hover {
                 box-shadow: inset 20px 2px 20px -5px #83281d63;
@@ -127,11 +274,26 @@ header {
             &:before {
                 content: '';
                 position: absolute;
-                top: 26px;
+                top: 50%;
+                transform: translateY(-50%);
                 left: 40px;
                 background: url(../images/icon-sprite.png) -48px -16px no-repeat;
                 width: 15px;
                 height: 16px;
+
+                @media screen and (max-width: 1070px) {
+                    top: 50%;
+                    left: 50%;
+                    background-position:-70px -23px;
+                    width: 25px;
+                    height: 30px;
+                    background-size: 1040px;
+                    transform: translate(-50%,-50%);
+                }
+
+                @media screen and (max-width: 520px) {
+                   left: 50%;
+                }
             }
         }
     }
@@ -339,6 +501,9 @@ header {
             width: 475px;
             margin: 0 auto;
             position: relative;
+            @media screen and(max-width: 945px){
+                display: none;
+            }
 
             h2{
                 text-transform: none;

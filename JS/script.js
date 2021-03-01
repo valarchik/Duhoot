@@ -7,7 +7,14 @@ let searchIconQuery = $('.search-icon')
 
 searchIcon.addEventListener('click', function () {
     if (!search.is(":visible") && !searchInput.is(":visible")) {
-        search.animate({width: "450px"}, 1000);
+        if(window.matchMedia('(max-width: 913px)').matches){
+            search.animate({width: "400px"}, 1000);
+            }else if(window.matchMedia('(max-width: 913px)').matches){
+
+        }
+        else{
+            search.animate({width: "450px"}, 1000);
+        };
         search.css('display', 'block');
         searchInput.css('display', 'block');
     }
@@ -129,7 +136,28 @@ mapButton.addEventListener('click',function () {
 
 $("#tabs").tabs();
 
+// nav-bar
 
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("drop-nav").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.drop-icon')) {
+
+        var dropdowns = document.getElementsByClassName("drop-nav-content");
+
+        for (let i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
 
 
 

@@ -6,6 +6,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f3ad7e20bb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -69,6 +71,7 @@
                 <div class="dropdown-flex">
                     <div  class="dropdown-wr dropdown-wr-country">
                         <span class="selected selected-country">Country</span>
+
                         <ul class="dropdown dropdown-country">
                             <li><a  class="country" href="#">Dubai</a></li>
                             <li ><a class="country" href="#">Amsterdam</a></li>
@@ -78,10 +81,11 @@
 
                     <div  class="dropdown-wr dropdown-wr-action">
                         <span class="selected selected-action">Action</span>
+
                         <ul class="dropdown dropdown-action">
                             <li><a  class="action" href="#">Education</a></li>
                             <li ><a class="action" href="#">Accomodation</a></li>
-                            <li ><a class=actiont" href="#">Event</a></li>
+                            <li ><a class="action" href="#">Event</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,10 +97,682 @@
 
     <main>
 
+        <section class="filter-block">
+            <div class="sort">
+                <ul>
+                    <li><a href="">recommended</a></li>
+                    <li><a href="">latest</a></li>
+                    <li><a href="">highlights</a></li>
+                </ul>
+            </div>
+
+            <div class="place-block">
+                <div  class="dropdown-wr dropdown-wr-place">
+                <span class="selected selected-place">Country</span>
+                    <ul class="dropdown dropdown-place">
+                        <li><a  class="place" href="#">Dubai</a></li>
+                        <li ><a class="place" href="#">Amsterdam</a></li>
+                        <li ><a class="place" href="#">New York</a></li>
+                        <li ><a class="place" href="#">Gavaii</a></li>
+                    </ul>
+                </div>
+
+                <button class="map-toggle hide">show map</button>
+            </div>
+
+            <div class="filter">
+                <div class="filter-title">filter:</div>
+                <div class="filter-item"></div>
+                <div class="filter-item"></div>
+                <div class="filter-item"></div>
+                <div class="filter-item"></div>
+                <div class="filter-item"></div>
+            </div>
+        </section>
+
+        <section class="posts">
+            <div class="grid-container">
+
+                <div class="item-post accomodation">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">2 bedroom house for rent in Dubai</p>
+                            <p class="title-info">vision agency</p>
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(365)</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="item-post event">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/event.jpg"></div>
+                        <div class="hide-information event">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">Beach party festival 2014 gggggggggggggggggg</p>
+                                <p class="title-info">Long beach</p>
+                                <div class="rating-mini">
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <p>(1165)</p>
+                                </div>
+                        </div>
+                    </div>
+
+                <div class="item-post transport">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information transport">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">Aliquam quis pulvinar purus</p>
+                            <p class="title-info">bus trans</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(365)</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="item-post accomodation">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">4 bedroom house for rent in Dubai</p>
+                            <p class="title-info">reality agency</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(165)</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="item-post-big accomodation">
+                <div class="image-post">
+                    <div class="image-wrapper"><img src="images/accomodation-2.jpg"></div>
+                    <div class="hide-information">
+                        <button>show more</button>
+                        <div class="star-rating gold">
+                            <div class="star-rating__wrap">
+                                <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                            </div>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="information-post">
+                    <div class="rating-big">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                    <h3 class="nick">Lucy-P</h3>
+                    <p class="text-info">  “Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus,
+                        quis posuere orci ornare. Duis mattis sagittis fringilla.”
+                        <span>...read more</span></p>
+                    <div class="title-block">
+                        <p class="title-info">vision agency</p>
+
+                        <div class="rating-mini">
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span></span>
+                            <p>(365)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="item-post-big event-big">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/event-big.jpg"></div>
+                        <div class="hide-information event">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <div class="rating-big">
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                        </div>
+                        <h3 class="nick">peter145</h3>
+                        <p class="text-info">  “Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis
+                                                posuere orci ornare. Duis mattis sagittis fringilla.”
+                                                <span>...read more</span></p>
+                        <div class="title-block">
+                            <p class="title-info">skybox club</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(1365)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-post accomodation">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">2 bedroom house for rent in Dubai</p>
+                            <p class="title-info">vision agency</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(365)</p>
+                            </div>
+                    </div>
+
+                    <div class="hide-information"></div>
+                </div>
+
+                <div class="item-post event">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/event.jpg"></div>
+                        <div class="hide-information event">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">Beach party festival 2014</p>
+
+                        <div class="title-block">
+                                <p class="title-info">Long beach</p>
+                                <div class="rating-mini">
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <p>(1165)</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-post transport">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information transport">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">Aliquam quis pulvinar purus</p>
+                            <p class="title-info">bus trans</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(365)</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="item-post accomodation">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">4 bedroom house for rent in Dubai</p>
+                            <p class="title-info">reality agency</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(165)</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="item-post-big event-big">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/event-big.jpg"></div>
+                        <div class="hide-information event">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <div class="rating-big">
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                        </div>
+                        <h3 class="nick">peter145</h3>
+                        <p class="text-info">  “Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis
+                            posuere orci ornare. Duis mattis sagittis fringilla.”
+                            <span>...read more</span></p>
+                        <div class="title-block">
+                            <p class="title-info">skybox club</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(1365)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-post accomodation">
+                    <div class="image-post">
+                        <div class="image-wrapper"><img src="images/accomodation.jpg"></div>
+                        <div class="hide-information">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="information-post">
+                        <p class="text-info">2 bedroom house for rent in Dubai</p>
+                            <p class="title-info">vision agency</p>
+
+                            <div class="rating-mini">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                                <p>(365)</p>
+                            </div>
+                    </div>
+
+                    <div class="hide-information"></div>
+                </div>
+
+                <div class="item-post event">
+                    <div class="image-post"><div class="image-wrapper"><img src="images/event.jpg"></div>
+                        <div class="hide-information event">
+                            <button>show more</button>
+                            <div class="star-rating gold">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
+                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                </div>
+                            </div>
+                            <a href="#"></a>
+                        </div></div>
+                    <div class="information-post">
+                        <p class="text-info">Beach party festival 2014</p>
+
+                        <div class="title-block">
+                                <p class="title-info">Long beach</p>
+
+                                <div class="rating-mini">
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <p>(1165)</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="load">Load more</a>
+
+            </div>
+
+
+        </section>
+
+        <section class="features-block">
+
+            <h1>What can DuHoot offer to you?</h1>
+            <p>Etiam cursus ipsum quis enim faucibus</p>
+
+            <div class="features" id="tabs">
+
+                <ul>
+                    <li class="feature-item accomodation">
+                        <a href="#tabs-1"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="feature-item people">
+                        <a href="#tabs-2"><i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="feature-item education">
+                        <a href="#tabs-3"><i class="fas fa-graduation-cap"></i></a>
+                    </li>
+                    <li class="feature-item event">
+                        <a href="#tabs-4"><i class="fas fa-music"></i></a>
+                    </li>
+                    <li class="feature-item transport">
+                        <a href="#tabs-5"><i class="fas fa-bus"></i></a>
+                    </li>
+
+                </ul>
+
+                <article class="feature-information accomodation" id="tabs-1">
+                    <h3>Reality</h3>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est.
+                        In hendrerit.</p>
+                    <p>Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est.
+                        In hendrerit, massa at.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.</p>
+                </article>
+                <article class="feature-information people" id="tabs-2">
+                    <h3>Communication</h3>
+                    <p>In hendrerit, massa at.Maecenas vitae risus est.
+                        Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est.
+                        In hendrerit, massa at.</p>
+                    <p> Maecenas vitae risus est. In hendrerit, massa at.Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus.Morbi gravida tellus in purus pharetra, vel dignissim
+                        mauris viverra.</p>
+                </article>
+                <article class="feature-information education" id="tabs-3">
+                    <h3>Study</h3>
+                    <p>Maecenas vitae risus est.In hendrerit, massa at.Maecenas vitae risus est.
+                        Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est.
+                    </p>
+                    <p> In hendrerit, massa at.Maecenas vitae risus est. In hendrerit, massa at.Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus.</p>
+                </article>
+                <article class="feature-information event" id="tabs-4">
+                    <h3>Concert</h3>
+                    <p>In hendrerit, massa at.Maecenas vitae risus est.
+                        Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est.
+                        In hendrerit, massa at.In hendrerit, massa at.Maecenas vitae risus est.</p>
+                    <p> Maecenas vitae risus est. In hendrerit, massa at.Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus.Morbi gravida tellus in purus pharetra, vel dignissim
+                        mauris viverra.Maecenas vitae risus est.</p>
+                </article>
+                <article class="feature-information transport" id="tabs-5">
+                    <h3> My bus </h3>
+                    <p> Morbi gravida tellus in purus pharetra.Maecenas vitae risus est.
+                        Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est.
+                        In hendrerit, massa at.Maecenas vitae risus est.</p>
+                    <p> Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus.Morbi gravida tellus in purus pharetra, vel dignissim
+                        mauris viverra.In hendrerit, massa at.Cum sociis natoque penatibus et magnis dis
+                        parturient montes.</p>
+                </article>
+
+            </div>
+        </section>
     </main>
 
     <footer>
+        <article class="subscribe-block">
+            <h3>Subscribe to our newsletter</h3>
 
+            <div class="subscribe-item">
+                <input type="email" placeholder="your@email.com"><button >subscribe</button>
+            </div>
+        </article>
+        <article class="bottom-footer">
+            <ul class="footer-list">
+                <p class="footer-title">Ipsum quis</p>
+                <li>Aliquam quis</li>
+                <li>Pulvinar purus</li>
+                <li>Etiam cursus</li>
+                <li>Ipsum quis</li>
+                <li>Enim faucibus</li>
+            </ul>
+            <ul class="footer-list">
+                <p class="footer-title">Quis ipsum</p>
+                <li>Etiam cursus</li>
+                <li>Pulvinar purus</li>
+                <li>Aliquam quis</li>
+                <li>Enim faucibus</li>
+                <li>Ipsum quis</li>
+            </ul>
+            <div class="social-copyright">
+                <p class="footer-title">Follow us</p>
+                <div class="socials">
+                    <a href="#"><div class="soc fb"></div></a>
+                    <a href="#"><div class="soc tw"></div></a>
+                    <a href="#"><div class="soc gl"></div></a>
+                    <a href="#"><div class="soc yb"></div></a>
+                </div>
+                <p class="copyright">Copyright © All Rights reserved</p>
+            </div>
+        </article>
     </footer>
 
     <script src="JS/script.js"></script>

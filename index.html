@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f3ad7e20bb.js" crossorigin="anonymous"></script>
@@ -13,12 +14,24 @@
 <body>
 
     <header>
+        <a href="" class="logo-mobile"><img src="images/logo.png" alt="logo"></a>
         <section class="container-head">
             <div class="head-block">
 
                 <nav class="global-navigation">
 
                     <a href="" class="logo"><img src="images/logo.png" alt="logo"></a>
+
+                    <div class="dropdown-nav">
+                        <i onclick="myFunction()" class="fas fa-bars drop-icon"></i>
+                        <div id="drop-nav" class="drop-nav-content">
+                            <a href="">Reality</a>
+                            <a href="">Living</a>
+                            <a href="">EduCation</a>
+                            <a href="">Entertainment</a>
+                            <a href="">Mobility</a>
+                        </div>
+                    </div>
 
                     <ul class="navigation">
                         <li><a href="">Reality</a></li>
@@ -38,7 +51,7 @@
             </div>
 
             <div class="login">
-                login
+                <p>login</p>
             </div>
         </section>
 
@@ -91,6 +104,7 @@
                 </div>
                 <input type="text" placeholder="Keyword,name,date,...">
                 <button class="search-button">Search</button>
+
             </form>
         </section>
     </header>

@@ -3,13 +3,21 @@ main {
     background-color: #f3f1f2;
     font-family: @default-font-family;
     padding-bottom: 140px;
+    overflow: auto;
+
+    @media screen and(max-width: 744px){
+       padding-bottom: 70px;
+    }
 }
 
 // filter bar for search
 
 .filter-block {
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2%;
+    grid-gap: 15px;
+    flex-flow: wrap;
     align-items: center;
     text-transform: uppercase;
     font-size: 12px;
@@ -20,7 +28,6 @@ main {
 
     .sort {
         padding: 10px;
-        margin-left: 200px;
 
         ul {
             margin: 0;
@@ -180,7 +187,6 @@ main {
     .filter {
         display: flex;
         align-items: center;
-        margin-right: 200px;
 
         &-title {
             margin-right: 10px;
@@ -229,6 +235,17 @@ main {
     justify-content: center;
     padding-bottom: 10px;
     border-bottom: 1px solid @lightgrey;
+
+    @media screen and(max-width: 955px){
+        grid-template-columns: repeat(3, 210px);
+    }
+    @media screen and(max-width: 750px) {
+        grid-template-columns: repeat(2, 210px);
+        grid-gap: 20px 25px;
+    }
+    @media screen and(max-width: 480px) {
+        grid-template-columns: repeat(1, 90%);
+    }
 }
 
 // small item styles
@@ -237,8 +254,8 @@ main {
     height: 265px;
     width: auto;
     background-color: white;
-    font-size: @default-font-size;
-    color: @postgrey;
+    font-size: 14px;
+    color: rgba(86, 99, 117, 0.8);
 }
 
 .image-post {
@@ -250,6 +267,12 @@ main {
 
     .image-wrapper {
         overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+        }
     }
 
     &:hover {
@@ -271,8 +294,8 @@ main {
         border-radius: 13px;
         color: white;
         background-color: #1baf5d;
-        top: 10px;
-        right: 10px;
+        top: 10%;
+        right: 5%;
         text-align: center;
         line-height: 27px;
         font-size: 12px;
@@ -376,6 +399,10 @@ main {
         display: inline-block;
         margin: 20px 10px;
 
+        @media screen and(max-width: 480px) {
+            margin-left: 70px;
+        }
+
         &__wrap {
             display: block;
             font-size: 12px;
@@ -438,6 +465,10 @@ main {
         margin: 0 auto;
         display: block;
 
+        @media screen and(max-width: 480px){
+            width: 37%;
+        }
+
         span {
             padding: 0;
             font-size: 16px;
@@ -475,6 +506,24 @@ main {
 
     &:nth-child(2n) {
         grid-column: ~"3/5";
+    }
+
+    @media screen and(max-width: 480px){
+        display: none;
+    }
+
+    @media screen and(max-width: 955px){
+        grid-column: ~"2/4";
+
+        &:nth-child(2n) {
+            grid-column: ~"1/3";
+        }
+        &:nth-of-type(3) {
+            grid-column: ~"1/3";
+        }
+    }
+    @media screen and(max-width: 750px){
+        grid-column: ~"1/3";
     }
 
     .image-post {
@@ -652,6 +701,11 @@ main {
 }
 
 .event-big {
+
+    @media screen and(max-width: 955px){
+    grid-column: ~"1/3"
+    }
+
     .image-post {
         background-image:linear-gradient(176deg, rgba(93, 93, 93, 0) 40%, rgb(0 0 0) 100%),
                             url("../images/event-big.jpg");

@@ -1,21 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="less/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-<header>
 
-</header>
-<main>
+    <header>
+        <section class="container-head">
+            <div class="head-block">
 
-</main>
-<footer>
+                <nav class="global-navigation">
 
-</footer>
+                    <a href="" class="logo"><img src="images/logo.png" alt="logo"></a>
 
-<script src="JS/script.js"></script>
+                    <ul class="navigation">
+                        <li><a href="">Reality</a></li>
+                        <li><a href="">Living</a></li>
+                        <li><a href="">EduCation</a></li>
+                        <li><a href="">Entertainment</a></li>
+                        <li><a href="">Mobility</a></li>
+                    </ul>
+
+                    <div class="global-search">
+                        <div class="search-show" id="search">
+                            <input type="search" id="site-search" name="search">
+                        </div>
+                        <div class="search-icon"></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="login">
+                login
+            </div>
+        </section>
+
+        <div class="overlay">
+            <form action="" name="login" method="get" class="form-login">
+
+                <div class="close-button"></div>
+
+                <h2>Log In With</h2>
+
+                <div class="social-buttons">
+                    <button class="facebook-button"><a href="">Facebook</a></button>
+                    <button class="google-button"><a href="">Google</a></button>
+                </div>
+
+                <label>Username:
+                    <input type="text" name="username">
+                </label>
+                <label>Password:
+                    <input type="password" name="password">
+                </label>
+
+                <button class="login-button">LogIn</button>
+            </form>
+        </div>
+
+        <section class="search-block">
+            <form class="search-form">
+                <h2>What are you looking for?</h2>
+                <div class="dropdown-flex">
+                    <div  class="dropdown-wr dropdown-wr-country">
+                        <span class="selected selected-country">Country</span>
+                        <ul class="dropdown dropdown-country">
+                            <li><a  class="country" href="#">Dubai</a></li>
+                            <li ><a class="country" href="#">Amsterdam</a></li>
+                            <li ><a class="country" href="#">New York</a></li>
+                        </ul>
+                    </div>
+
+                    <div  class="dropdown-wr dropdown-wr-action">
+                        <span class="selected selected-action">Action</span>
+                        <ul class="dropdown dropdown-action">
+                            <li><a  class="action" href="#">Education</a></li>
+                            <li ><a class="action" href="#">Accomodation</a></li>
+                            <li ><a class=actiont" href="#">Event</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <input type="text" placeholder="Keyword,name,date,...">
+                <button class="search-button">Search</button>
+            </form>
+        </section>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="JS/script.js"></script>
 </body>
 </html>

@@ -1,5 +1,21 @@
 @import "less/variables.less";
+@import "less/header.less";
 
-.header {
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('https://nomail.com.ua/files/eot/77171d8f5b5283f9d47a3434704bf944.eot?#iefix') format('embedded-opentype'),
+    url('https://nomail.com.ua/files/woff/77171d8f5b5283f9d47a3434704bf944.woff') format('woff'),
+    url('https://nomail.com.ua/files/woff2/77171d8f5b5283f9d47a3434704bf944.woff2') format('woff2');
+}
 
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: local('Gotham-Medium'),
+    url('https://nomail.com.ua/files/woff/77171d8f5b5283f9d47a3434704bf944.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    font-family: @default-font-family;
+    box-sizing: border-box;
 }

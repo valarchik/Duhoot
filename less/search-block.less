@@ -1,0 +1,154 @@
+.search-block {
+    background: url("../images/pattern.png"),
+    url("../images/search-background.jpg");
+    background-size: cover;
+    width: 100%;
+    padding: 60px 0 1px 0;
+    background-position-y: -95px;
+
+    @media screen and(max-width: 800px) {
+        background-size: auto;
+    }
+
+    .search-form {
+        width: 475px;
+        margin: 0 auto;
+        position: relative;
+        font-family: @default-font-family;
+
+        @media screen and(max-width: 515px) {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: white;
+            font-weight: 100;
+            margin: 0;
+            margin-bottom:30px;
+            text-align: center;
+
+            @media screen and(max-width: 515px) {
+                font-size: 26px;
+            }
+        }
+
+        .dropdown-flex {
+            display: flex;
+            justify-content:space-between;
+            margin-bottom: 15px;
+
+            @media screen and(max-width: 515px) {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .drop-button {
+                text-align: left;
+                border: 2px solid rgba(255, 255, 255, 0.05);
+                background: #ffffff14;
+                font-size: @default-font-size + 4;
+                .mix_dropbutton(223px,10px,30px,
+                        rgba(255, 255, 255, 0.85));
+
+                @media screen and(max-width: 515px) {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                .selected {
+                    line-height: 30px;
+                    font-family: Verdana;
+                    opacity: 0.8;
+                }
+
+                &:after {
+                    .mix_dropbutton-after();
+
+                }
+
+                .dropdown {
+                    .mix_dropdown(200px);
+                    border: 1px solid rgba(0, 0, 0, 0.17);
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                    padding-left: 0;
+
+                    @media screen and(max-width: 515px) {
+                        width: 95%;
+                    }
+
+                    &:after {
+                        .mix_dropdown-after();
+                    }
+
+                    li {
+                        &:not(:last-child) {
+                            border-bottom: 2px solid @lightgrey;
+                        }
+                        &:hover  {
+                            a {
+                                color: #6E7778;
+                            }
+                        }
+
+                        a {
+                            display: block;
+                            padding: 12px;
+                            text-decoration: none;
+                            transition: all 0.3s ease-out;
+                            color: @darkgrey;
+                            font-family: Verdana;
+                        }
+                    }
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            padding-left: 30px;
+            background: #ffffff14;
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1);
+            cursor: pointer;
+            outline: none;
+            color: rgba(255, 255, 255, 0.85);
+            box-sizing: border-box;
+            margin-top: 5px;
+
+            @media screen and(max-width: 515px) {
+                display: table;
+                width: 90%;
+                margin: 5px auto;
+            }
+        }
+
+        .search-button {
+            display: block;
+            margin: 25px auto ;
+            width: 140px;
+            padding: 23px;
+            background-color: @red;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            font-size: @default-font-size + 4;
+            font-family: @default-font-family;
+
+            &:hover {
+                box-shadow: inset 3px 1px 20px 8px #83281d9e;
+                color: rgba(255, 255, 255, 0.85);
+                outline: none;
+                border: none;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

@@ -6,24 +6,23 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f3ad7e20bb.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-</head>
 
 <body>
-
     <header>
         <a href="" class="logo-mobile"><img src="images/logo.png" alt="logo"></a>
         <section class="container-head">
             <div class="head-block">
-
                 <nav class="global-navigation">
 
                     <a href="" class="logo"><img src="images/logo.png" alt="logo"></a>
 
                     <div class="dropdown-nav">
-                        <i onclick="myFunction()" class="fas fa-bars drop-icon"></i>
+                        <i onclick="toggleClass()" class="fas fa-bars drop-icon"></i>
                         <div id="drop-nav" class="drop-nav-content">
                             <a href="">Reality</a>
                             <a href="">Living</a>
@@ -63,8 +62,8 @@
                 <h2>Log In With</h2>
 
                 <div class="social-buttons">
-                    <button class="facebook-button"><a href="">Facebook</a></button>
-                    <button class="google-button"><a href="">Google</a></button>
+                    <button class="facebook-button">Facebook</button>
+                    <button class="google-button">Google</button>
                 </div>
 
                 <label>Username:
@@ -82,17 +81,17 @@
             <form class="search-form">
                 <h2>What are you looking for?</h2>
                 <div class="dropdown-flex">
-                    <div  class="dropdown-wr dropdown-wr-country">
+                    <button class="drop-button drop-button-country">
                         <span class="selected selected-country">Country</span>
 
                         <ul class="dropdown dropdown-country">
                             <li><a  class="country" href="#">Dubai</a></li>
-                            <li ><a class="country" href="#">Amsterdam</a></li>
-                            <li ><a class="country" href="#">New York</a></li>
+                            <li><a class="country" href="#">Amsterdam</a></li>
+                            <li><a class="country" href="#">New York</a></li>
                         </ul>
-                    </div>
+                    </button>
 
-                    <div  class="dropdown-wr dropdown-wr-action">
+                    <button class="drop-button drop-button-action">
                         <span class="selected selected-action">Action</span>
 
                         <ul class="dropdown dropdown-action">
@@ -100,7 +99,7 @@
                             <li ><a class="action" href="#">Accomodation</a></li>
                             <li ><a class="action" href="#">Event</a></li>
                         </ul>
-                    </div>
+                    </button>
                 </div>
                 <input type="text" placeholder="Keyword,name,date,...">
                 <button class="search-button">Search</button>
@@ -121,7 +120,7 @@
             </div>
 
             <div class="place-block">
-                <div  class="dropdown-wr dropdown-wr-place">
+                <div  class="drop-button drop-button-place">
                 <span class="selected selected-place">Country</span>
                     <ul class="dropdown dropdown-place">
                         <li><a  class="place" href="#">Dubai</a></li>
@@ -131,7 +130,7 @@
                     </ul>
                 </div>
 
-                <button class="map-toggle hide">show map</button>
+                <button class="map-toggle" data-status="hide">show map</button>
             </div>
 
             <div class="filter">
@@ -300,16 +299,16 @@
                         <button>show more</button>
                         <div class="star-rating gold">
                             <div class="star-rating__wrap">
-                                <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
-                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-10" title="5 out of 5 stars"></label>
-                                <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="4">
-                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-9" title="4 out of 5 stars"></label>
-                                <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
-                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-8" title="3 out of 5 stars"></label>
-                                <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
-                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-7" title="2 out of 5 stars"></label>
-                                <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
-                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-6" title="1 out of 5 stars"></label>
+                                <input class="star-rating__input"  type="radio" name="rating" value="5">
+                                <label class="star-rating__ico fa fa-star-o fa-lg"  title="5 out of 5 stars"></label>
+                                <input class="star-rating__input" type="radio" name="rating" value="4">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" title="4 out of 5 stars"></label>
+                                <input class="star-rating__input"  type="radio" name="rating" value="3">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" title="3 out of 5 stars"></label>
+                                <input class="star-rating__input" type="radio" name="rating" value="2">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" title="2 out of 5 stars"></label>
+                                <input class="star-rating__input" type="radio" name="rating" value="1">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" title="1 out of 5 stars"></label>
                             </div>
                         </div>
                         <a href="#"></a>
@@ -762,19 +761,19 @@
         <article class="bottom-footer">
             <ul class="footer-list">
                 <p class="footer-title">Ipsum quis</p>
-                <li>Aliquam quis</li>
-                <li>Pulvinar purus</li>
-                <li>Etiam cursus</li>
-                <li>Ipsum quis</li>
-                <li>Enim faucibus</li>
+                <a href="#"><li>Aliquam quis</li></a>
+                <a href="#"><li>Pulvinar purus</li></a>
+                <a href="#"><li>Etiam cursus</li></a>
+                <a href="#"><li>Ipsum quis</li></a>
+                <a href="#"><li>Enim faucibus</li></a>
             </ul>
             <ul class="footer-list">
                 <p class="footer-title">Quis ipsum</p>
-                <li>Etiam cursus</li>
-                <li>Pulvinar purus</li>
-                <li>Aliquam quis</li>
-                <li>Enim faucibus</li>
-                <li>Ipsum quis</li>
+                <a href="#"><li>Etiam cursus</li></a>
+                <a href="#"><li>Pulvinar purus</li></a>
+                <a href="#"><li>Aliquam quis</li></a>
+                <a href="#"><li>Enim faucibus</li></a>
+                <a href="#"><li>Ipsum quis</li></a>
             </ul>
             <div class="social-copyright">
                 <p class="footer-title">Follow us</p>
@@ -790,5 +789,7 @@
     </footer>
 
     <script src="JS/script.js"></script>
+    <script src="JS/dropdowns.js"></script>
+
 </body>
 </html>

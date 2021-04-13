@@ -14,10 +14,144 @@
 
 /*mixins*/
 
-.border(@radius:5px) {
-    border-top:2px solid grey;
-    border-right: 3px solid darkgrey;
-    border-bottom:3px solid darkgrey;
-    border-left:2px solid grey;
-    border-radius: @radius;
+.mix_dropbutton(
+    @width,
+    @padding,
+    @padding-left,
+    @color
+) {
+    width: @width;
+    position: relative;
+    padding: @padding;
+    padding-left: @padding-left;
+    border-radius: 36px;
+    cursor: pointer;
+    outline: none;
+    color: @color;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.mix_dropbutton-after(
+    @size:6px,
+    @right:24px,
+    @top:40%,
+    @color:rgba(255, 255, 255, 0.85)
+) {
+    content: "";
+    width: @size;
+    height: @size;
+    position: absolute;
+    right: @right;
+    top: @top;
+    border-left: 3px solid @color;
+    border-bottom: 3px solid @color;
+    transform: rotate(-45deg);
+}
+
+.mix_dropdown(
+    @width
+) {
+    position: absolute;
+    top: 105%;
+    left: 7px;
+    right: 0;
+    background: #ffffff;
+    font-weight: normal;
+    transition: all 0.5s ease-in;
+    list-style: none;
+    display: none;
+    pointer-events: auto;
+    width: @width;
+    border-radius: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.mix_dropdown-after() {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.95) transparent;
+}
+
+.mix_login-button(@fontfamily){
+    height: 40px;
+    flex-grow: 1;
+    border-radius: 20px;
+    border: none;
+    background-image: linear-gradient(to right,
+    #e94e38 0%, #e96e58 51%, #e92727 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: @default-font-size + 2;
+    font-family: @fontfamily;
+
+    &:hover {
+        background-position: right center; /* change the direction of the change here */
+        text-decoration: none;
+    }
+}
+
+.mix_button-before(@backgroundposition) {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18%;
+    background-image: url(../images/icon-sprite.png);
+    background-position:@backgroundposition;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.mix_maptoggle-icon(@backgroundPosition){
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    background-image: url(../images/icon-sprite.png);
+    background-position: @backgroundPosition;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 15px;
+}
+.mix_rating-stars(@fontsize){
+    font-size: 0;
+    width: 62%;
+    margin: 0 auto;
+    display: block;
+
+    span{
+        padding: 0;
+        font-size: @fontsize;
+        line-height: 1;
+        color: lightgrey;
+
+        &:before {
+            content: '★';
+        }
+
+        &.active {
+            color: @yellow;
+        }
+    }
+}
+
+.mix_feature-item(@color){
+    border-color: @color ;
+
+    i:before {
+        color: @color;
+    }
 }

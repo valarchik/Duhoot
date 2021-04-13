@@ -1,0 +1,130 @@
+.overlay {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10% 0;
+    z-index: 2;
+
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        width: 475px;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 82px;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 15px;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        border: 2px solid #ffffff1f;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+        }
+
+        .close-button {
+            background: rgb(175, 175, 175);
+            height: 20px;
+            width: 3px;
+            position: relative;
+            left: 98%;
+            transform: rotate(45deg);
+
+            &:after {
+                content: "";
+                height: 3px;
+                width: 20px;
+                background: rgb(175, 175, 175);
+                position: absolute;
+                left: -8px;
+                top: 8px;
+                transform: rotate(0deg);
+            }
+
+            &:hover {
+                background: white;
+
+                &:after {
+                    background: white;
+                }
+            }
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 100;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            gap: 15px;
+
+            button {
+                position: relative;
+                .mix_login-button(Verdana);
+            }
+
+            .facebook-button {
+
+                &:before {
+                    .mix_button-before(-644px -14px);
+
+                    @media screen and (max-width: 430px) {
+                        left: 10%;
+                    }
+                }
+            }
+
+            .google-button {
+
+                &:before {
+                    .mix_button-before(-674px -15px);
+
+                    @media screen and (max-width: 430px) {
+                        left: 8%;
+                    }
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            margin-top: 5px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            box-sizing: border-box;
+            padding: 5px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        label {
+            color: white;
+        }
+
+        .login-button {
+            .mix_login-button(@default-font-family);
+            margin-top: 15px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
